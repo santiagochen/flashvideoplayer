@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Custom player</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript" src="js/swfobject.js"></script>
+	
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript">
+	var playlist = [
+	{'thumb' : 'file/image/t1.jpg', 'title' : 'advertiser1', 'description' : '陈凯歌题“红杏出墙”送志玲', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=6793001&PluID=56&pos=3614&ord=[timestamp]&cim=1&t=1&ai=13958751'}, 
+	{'thumb' : 'file/image/t2.jpg', 'title' : 'advertiser2', 'description' : '陈凯歌题“红杏出墙”送志玲', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=6793003&PluID=56&pos=1397&ord=[timestamp]&cim=1&t=1&ai=13958767'},
+	{'thumb' : 'file/image/t3.jpg', 'title' : 'advertiser3', 'description' : '陈凯歌题“红杏出墙”送志玲', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=6793002&PluID=56&pos=3760&ord=1392891070495&cim=1&t=1&ai=13958762'},
+	{'thumb' : 'file/image/t4.jpg', 'title' : 'advertiser4', 'description' : 'this is the fourth advertiser4', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=6792999&PluID=56&pos=6402&ord=1392890534469&cim=1&t=1&ai=13958738'},
+	{'thumb' : 'file/image/t6.jpg', 'title' : 'advertiser5', 'description' : 'this is the fourth advertiser5', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=7664172&PluID=56&pos=2612&ord=[timestamp]&cim=1'},
+	{'thumb' : 'file/image/t5.jpg', 'title' : 'advertiser6', 'description' : 'this is the fourth advertiser6', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=8733810&PluID=56&pos=4420&ord=[timestamp]&cim=1'},
+	{'thumb' : 'file/image/t6.jpg', 'title' : 'advertiser7', 'description' : 'this is the fourth advertiser7', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=6793008&PluID=56&pos=2797&ord=1393207996123&cim=1&t=1&ai=13958783'},
+	{'thumb' : 'file/image/t8.jpg', 'title' : 'vast linear', 'description' : 'this is the vast linear', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=9243763&PluID=56&pos=5802&ord=[timestamp]&cim=1'},
+	{'thumb' : 'file/image/t9.jpg', 'title' : 'vast nonlinear', 'description' : 'this is the vast nonlinear', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=9243904&PluID=56&pos=5031&ord=[timestamp]&cim=1'},
+	{'thumb' : 'file/image/t10.jpg', 'title' : 'vpaid LOGOKIG', 'description' : 'this is the vpaid nonlinear', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=9254592&PluID=56&pos=2936&ord=[timestamp]&cim=1'},
+	{'thumb' : 'file/image/t9.jpg', 'title' : 'vpaid linear', 'description' : 'this is the vpaid linear', 'video' : 'http://bsch.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=9244320&PluID=56&pos=5983&ord=[timestamp]&cim=1'}
+
+	
+];
+	
+		function getPlayList(){
+			var str = JSON.stringify(playlist);
+			return str;
+		}
+
+		function getAdInfo(data){
+
+			//console.log(data)
+		}
+
+	</script>
+
+    <script type="text/javascript">	
+		var flashvars ={};
+		var params = {
+			allowFullScreen:"true",
+			allowScriptAccess:"always",
+			allowNetworking:"all",
+			allowFullScreen:"true",
+			vidindex:1
+		};
+		var attributes = {
+			allowFullScreen:"true"
+		};
+
+		var attributes = {
+			allowFullScreen:"true",
+			allowScriptAccess:"always",
+			allowNetworking:"all",
+			wmode:"opaque"
+		};
+		swfobject.embedSWF("test.swf?random="+Math.random(), "myContent", "940", "498", "9.0.0",flashvars, params, attributes);
+		
+		/**
+		 * 
+		 */
+		 function jstracer(data){
+		 	console.log(data)
+		 }
+
+		function handleInStreamInteraction( ) {
+			alert("handleInStreamInteraction( " + arguments + " )");
+		}
+    </script>
+	
+  </head>
+  <body>
+    <div id="myContent">
+      <p>Alternative content</p>
+    </div>
+
+    
+  </body>
+</html>
